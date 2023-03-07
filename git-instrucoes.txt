@@ -1,0 +1,20 @@
+=======================================================================================
+=================================================================== GITHUB - INSTRUCOES
+=======================================================================================
+
+>>> CRIAR UM REPOSITÓRIO E ENVIAR PARA O REPOSITÓRIO DO GITHUB:
+
+. Criar um repositorio no GITHUB
+
+. Acessar CODE > HTTPS
+
+. Copiar o endereço https informado (ex.: https://github.com/manguto/lib.git) 
+
+. Acessar a pasta do projeto no computador local
+
+. Certifique de estar com GIT BASH instalado (git-scm.com/downloads)
+
+. Clique direito e clique em "Git bash here" 
+
+  $ git clone https://github.com/manguto/lib.git
+
