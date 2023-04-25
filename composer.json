@@ -1,0 +1,20 @@
+{
+	"name" : "manguto/lib",
+	"type" : "library",
+	"description" : "Libraries",
+	"authors" : [{
+			"name" : "Manguto",
+			"email" : "admin@manguto.com"
+		}
+	],
+	"require" : {
+		"php" : "^7.0.0"		
+	},
+	"autoload" : {		
+		"files" : [
+			"functions.php"
+		]
+	},
+	"minimum-stability" : "dev",
+	"license" : "GPL-3.0-or-later"
+}
