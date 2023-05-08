@@ -3,7 +3,7 @@
  * @author Manguto
  *
  */
-class MangutoStringsStatic {
+class LibStringStatic {
 	
 	/**
 	 */
@@ -20,4 +20,3 @@ class MangutoStringsStatic {
 }
 
 
-//20230508-1442

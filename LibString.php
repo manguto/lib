@@ -4,7 +4,7 @@
  * @author Manguto
  *
  */
-class MangutoStrings extends MangutoStringsStatic{
+class LibString{
 	
 	private $content;
 	
@@ -16,14 +16,14 @@ class MangutoStrings extends MangutoStringsStatic{
 	 * uppercase
 	 */
 	public function strtoupper() {
-		$this->content = MangutoStringsStatic::strtoupper($this->content);
+		$this->content = LibStringStatic::strtoupper($this->content);
 	}
 	
 	/**
 	 * lowercase
 	 */
 	public function strtolower() {
-		$this->content = MangutoStringsStatic::strtolower($this->content);
+		$this->content = LibStringStatic::strtolower($this->content);
 	}
 	
 	
