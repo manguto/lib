@@ -1,20 +1,24 @@
 {
-	"name" : "manguto/lib",
-	"type" : "library",
-	"description" : "Libraries",
-	"authors" : [{
-			"name" : "Manguto",
-			"email" : "admin@manguto.com"
+	"name": "manguto/lib",
+	"type": "library",
+	"description": "Libraries",
+	"authors": [
+		{
+			"name": "Manguto",
+			"email": "admin@manguto.com"
 		}
 	],
-	"require" : {
-		"php" : "^8.0.0"		
+	"require": {
+		"php": "^8.0.0",
+		"slim/slim": "4.*",
+		"laminas/laminas-diactoros": "^3.0",
+		"twig/twig": "^3.0"
 	},
-	"autoload" : {		
-		"files" : [
+	"autoload": {
+		"files": [
 			"functions.php"
 		]
 	},
-	"minimum-stability" : "dev",
-	"license" : "GPL-3.0-or-later"
+	"minimum-stability": "dev",
+	"license": "GPL-3.0-or-later"
 }
