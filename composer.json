@@ -17,7 +17,10 @@
 	"autoload": {
 		"files": [
 			"functions.php"
-		]
+		],
+		"psr-4": {
+            "Slim\\": "Slim"
+        }
 	},
 	"minimum-stability": "dev",
 	"license": "GPL-3.0-or-later"

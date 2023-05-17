@@ -1,5 +1,5 @@
 <?php
-namespace vendor\manguto\lib;
+namespace manguto\lib;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Exception\HttpInternalServerErrorException;

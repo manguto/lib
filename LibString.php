@@ -1,5 +1,6 @@
 <?php
 
+namespace manguto\lib;
 /**
  * @author Manguto
  *
@@ -15,7 +16,7 @@ class LibString{
 	/**
 	 * uppercase
 	 */
-	public function strtoupper() {
+	public function strtoupper() { 
 		$this->content = LibStringStatic::strtoupper($this->content);
 	}
 	
