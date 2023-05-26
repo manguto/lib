@@ -9,7 +9,6 @@
 	],
 	"require" : {
 		"php" : "^8.0.0",
-		"slim/slim-skeleton" : "master",
 		"slim/twig-view" : "^2.2"		
 	},
 	"autoload" : {
