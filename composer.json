@@ -9,9 +9,7 @@
 	],
 	"require" : {
 		"php" : "^8.0.0",
-		"slim/slim" : "4.*",
-		"laminas/laminas-diactoros" : "^3.0",
-		"twig/twig" : "^3.0"
+		"slim/twig-view" : "^2.2"		
 	},
 	"autoload" : {
 		"files" : ["src/functions.php"],
