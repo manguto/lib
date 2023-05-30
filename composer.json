@@ -8,8 +8,7 @@
 		}
 	],
 	"require" : {
-		"php" : "^8.0.0",
-		"slim/twig-view" : "^2.2"		
+		"php" : "^8.0.0"
 	},
 	"autoload" : {
 		"files" : ["src/functions.php"],
