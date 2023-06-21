@@ -15,17 +15,21 @@ class LibCharts {
 	 * retorna o html de um grafico PIZZA
 	 *
 	 * @param string $title
-	 *        	- 'pieChart'
 	 * @param array $data
-	 *        	- [2, 10, 16, 30, 42]
-	 * @param array $legend
-	 *        	- ['Work', 'Eat', 'Sleep', 'Listen to music', 'Code']
-	 * @param bool $displayLegend
+	 * @param array $legend	 
 	 * @return array - chart,legend
 	 */
 	static function pie(string $title, array $data, array $legend): array{
 		{
-			$Chart = new Chart('pie', $title);
+			if(false) // ////////////////// MODELO DE PARAMETROS //////////////////////// //
+			{
+				$title = 'pie_chart';
+				$data = [2, 10, 16, 30, 42];
+				$legend = ['Work', 'Eat', 'Sleep', 'Listen to music', 'Code'];
+			} // /////////////////////////////////////////////////////////////////////// //
+		}
+		{
+			$Chart = new Chart('pie', $title . '_' .uniqid());
 			$Chart->set('data', $data);
 			$Chart->set('legend', $legend);
 			$Chart->set('displayLegend', false);
@@ -51,11 +55,11 @@ class LibCharts {
 	 * @param array $setsCategories
 	 * @return array
 	 */
-	static function bar(string $title, array $sets, array $setsLegends, array $setsCategories): array{
+	static function bar(string $title, array $data, array $legend, array $categories): array{
 		{
 			if(false) // ////////////////// MODELO DE PARAMETROS //////////////////////// //
 			{
-				$sets = [
+				$data = [
 						[
 								2,
 								10,
@@ -67,12 +71,12 @@ class LibCharts {
 								16
 						]
 				];
-				$setsLegends = [
+				$legend = [
 						'01/01',
 						'01/02',
 						'01/03'
 				];
-				$setsCategories = [
+				$categories = [
 						'Inputs',
 						'Outputs'
 				];
@@ -81,18 +85,18 @@ class LibCharts {
 				/*
 				 * // An example of a bar chart with multiple datasets
 				 */
-				$Chart = new Chart('bar', $title);
-				$Chart->set('data', $sets);
-				$Chart->set('legend', $setsLegends);
+				$Chart = new Chart('bar', $title.'_'.uniqid());
+				$Chart->set('data', $data);
+				$Chart->set('legend', $legend);
 				// We don't use the x-axis for the legend so we specify the name of each dataset
-				$Chart->set('legendData', $setsCategories);
+				$Chart->set('legendData', $categories);
 				// $barChart->set('displayLegend', false);
 			}
 			{
 				// just chart
 				$chart = $Chart->returnFullHTML();
 				// just legend
-				if(sizeof($setsCategories) > 0){
+				if(sizeof($categories) > 0){
 					$legend = $Chart->returnLegend();
 				}else{
 					$legend = '';

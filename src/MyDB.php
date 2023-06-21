@@ -4,7 +4,6 @@ namespace manguto\lib;
 
 use Lazer\Classes\Helpers\Validate;
 use Lazer\Classes\Database as Database;
-use PhpParser\Node\Expr\Cast\Bool_;
 
 class MyDB {
 	// ####################################################################################################
