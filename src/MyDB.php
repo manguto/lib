@@ -101,6 +101,7 @@ class MyDB {
 	 */
 	static function search(string $tableName, string $parameterName = 'id', string $parameterValue = '0', string $operator = '>'){
 		{ // busca o registro informado
+			//deb($tableName);
 			$return = Database::table($tableName)->where($parameterName, $operator, $parameterValue)->findAll()->asArray();
 		}
 		return $return;

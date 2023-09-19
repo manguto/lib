@@ -2,7 +2,6 @@
 
 namespace manguto\lib;
 
-
 abstract class MyDBTable {
 	public ?int $id;
 	// ####################################################################################################
@@ -86,7 +85,7 @@ abstract class MyDBTable {
 		}
 		{ // verificacao/inclusao de registros base
 			{ // obtencao do ultimo id inserido
-				$lastId = MyDB::getLastId($tablename);				
+				$lastId = MyDB::getLastId($tablename);
 			}
 			{ // verificacao de inexistencia de registros para insercao dos registros base
 				if($lastId == 0){
@@ -155,8 +154,13 @@ abstract class MyDBTable {
 			// throw new \Exception("Você solicitou o 'RESET' da tabela '$tablename'. Tem certeza disto? Em caso afirmativo, comente esta linha do código.");
 		}
 		{ // arquivos a serem removidos
-			$filename = LAZER_DATA_PATH . $tablename . '.config.json';
-			$filename2 = LAZER_DATA_PATH . $tablename . '.data.json';
+			if(LOCAL_SERVER){
+				$path = 'App/Domain/' . ucfirst($tablename) . '/';
+			}else{
+				$path = '';
+			}
+			$filename = LAZER_DATA_PATH . $path . $tablename . '.config.json';
+			$filename2 = LAZER_DATA_PATH . $path . $tablename . '.data.json';
 		}
 		{ // remocao dos arquivos
 			unlink($filename);
@@ -189,7 +193,7 @@ abstract class MyDBTable {
 						$extendedClassDefault = $extendedClassnamePath::default;
 					}else if(defined("{$extendedClassnamePath}::defaultCSVFile")){
 						$extendedClassDefaultCSV_filename = $extendedClassnamePath::defaultCSVFile;
-						$extendedClassDefault = LibCSVStatic::csvToArray($extendedClassDefaultCSV_filename);						
+						$extendedClassDefault = LibCSVStatic::csvToArray($extendedClassDefaultCSV_filename);
 					}else{
 						$extendedClassDefault = [];
 					}
