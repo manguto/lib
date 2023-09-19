@@ -176,10 +176,10 @@ class LibDBCSV {
 	protected function getFilename(){
 		{ // verificao de diretorio e arquivo
 			if(! defined('BD_CAMINHO')){
-				throw new Exception("Não foi possível obter o caminho da base de dados (diretório) pois este não foi definido (BD_CAMINHO)!");
+				throw new \Exception("Não foi possível obter o caminho da base de dados (diretório) pois este não foi definido (BD_CAMINHO)!");
 			}else{
 				if(! is_dir(BD_CAMINHO)){
-					throw new Exception("O diretório informado para a base de dados, não foi encontrado (BD_CAMINHO)!");
+					throw new \Exception("O diretório informado para a base de dados, não foi encontrado (BD_CAMINHO)!");
 				}
 			}
 		}
